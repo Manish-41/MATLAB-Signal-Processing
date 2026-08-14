@@ -103,11 +103,7 @@ function signal_processing_tool
     t = [];
     cleanSignal = [];
     noisySignal = [];
-
-
-    % ---------------------------------------------------------
     % Generate Signal
-    % ---------------------------------------------------------
     function generateSignal(~, ~)
 
         % Sampling frequency
@@ -154,11 +150,7 @@ function signal_processing_tool
         status.Text = 'Signal generated successfully.';
 
     end
-
-
-    % ---------------------------------------------------------
     % Filter Signal
-    % ---------------------------------------------------------
     function filterSignal(~, ~)
 
         if isempty(noisySignal)
@@ -185,11 +177,8 @@ function signal_processing_tool
         status.Text = 'Noise filtered successfully.';
 
     end
-
-
-    % ---------------------------------------------------------
     % FFT Analysis
-    % ---------------------------------------------------------
+   
     function fftAnalysis(~, ~)
 
         if isempty(noisySignal)
@@ -237,9 +226,9 @@ function signal_processing_tool
     end
 
 
-    % ---------------------------------------------------------
+
     % Reset
-    % ---------------------------------------------------------
+  
     function resetTool(~, ~)
 
         cla(ax1);
